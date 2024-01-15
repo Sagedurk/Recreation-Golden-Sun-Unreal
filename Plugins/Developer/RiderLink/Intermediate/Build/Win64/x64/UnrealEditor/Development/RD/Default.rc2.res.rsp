@@ -74,6 +74,6 @@
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
 /DPROJECT_PRODUCT_NAME="Third Person Game Template"
-/DPROJECT_PRODUCT_IDENTIFIER=TestProject
-/fo "G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Default.rc2.res"
+/DPROJECT_PRODUCT_IDENTIFIER=GoldenSun
+/fo "G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

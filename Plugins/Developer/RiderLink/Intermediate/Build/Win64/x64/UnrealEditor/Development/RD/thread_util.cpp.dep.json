@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\util\\thread_util.cpp",
+        "Source": "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\util\\thread_util.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\util\\thread_util.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\util\\thread_util.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\thread",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\yvals_core.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\vcruntime.h",

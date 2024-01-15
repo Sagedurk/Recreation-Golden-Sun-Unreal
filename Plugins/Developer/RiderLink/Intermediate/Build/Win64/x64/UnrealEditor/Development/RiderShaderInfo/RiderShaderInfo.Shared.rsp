@@ -6,7 +6,7 @@
 /I "Runtime\Json\Public"
 /I "Runtime\RenderCore\Public"
 /I "Runtime\RHI\Public"
-/I "G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Source"
+/I "G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Source"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "G:\Programs\Visual Studio\VC\Tools\MSVC\14.36.32532\INCLUDE"
