@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\base\\iserializersowner.cpp",
+        "Source": "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\base\\iserializersowner.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\base\\iserializersowner.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\base\\iserializersowner.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\unordered_set",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\yvals_core.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\vcruntime.h",
@@ -87,7 +87,7 @@
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\xstring",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\iosfwd",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\xnode_handle.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\rd_framework_export.h"
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\rd_framework_export.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

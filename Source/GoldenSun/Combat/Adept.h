@@ -118,7 +118,12 @@ public:
 
 	void UpdateStats();
 	void InitializeStats(FUnitStats* StatBlock);
-	
+
+	UFUNCTION(BlueprintCallable)
+	FUnitStats CalculateNewStats(ADjinni* Djinni, AAdeptClass* ClassPreview);
+	FUnitStats SubtractStats(FUnitStats Minuend, FUnitStats Subtrahend);
+	FUnitStats AddStats(FUnitStats Addend, FUnitStats Addend2);
+
 	UFUNCTION(BlueprintCallable)
 	TArray<APsynergy*> GetPsynergies();
 

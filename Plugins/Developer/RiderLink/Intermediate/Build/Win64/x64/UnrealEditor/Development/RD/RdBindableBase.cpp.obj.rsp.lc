@@ -1,8 +1,8 @@
-"G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\RdBindableBase.cpp"
-/FI"G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.lc.obj"
-/sourceDependencies"G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.dep.lc.json"
-@"G:\Projects\Unreal\TestProject\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\RdBindableBase.cpp"
+/FI"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.lc.obj"
+/sourceDependencies"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RdBindableBase.cpp.dep.lc.json"
+@"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

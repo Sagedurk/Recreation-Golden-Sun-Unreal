@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\scheduler\\simplescheduler.cpp",
+        "Source": "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\scheduler\\simplescheduler.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\scheduler\\simplescheduler.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\scheduler\\base\\ischeduler.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\scheduler\\simplescheduler.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\src\\main\\scheduler\\base\\ischeduler.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\functional",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\yvals_core.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\vcruntime.h",
@@ -103,7 +103,7 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\math.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\vcruntime_startup.h",
             "g:\\programs\\visual studio\\vc\\tools\\msvc\\14.36.32532\\include\\xthreads.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\rd_framework_export.h"
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\src\\rd_framework_cpp\\rd_framework_export.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

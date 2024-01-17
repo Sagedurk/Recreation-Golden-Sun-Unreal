@@ -3,8 +3,8 @@
 
 #include "AdeptClassSeries.h"
 
-#include "Adept.h"
 #include "AdeptClass.h"
+
 
 // Sets default values
 AAdeptClassSeries::AAdeptClassSeries()
@@ -61,6 +61,9 @@ bool AAdeptClassSeries::MeetsDjinnRequirement(AAdept* Adept, FClassAvailability 
 
 void AAdeptClassSeries::PopulateClassPsynergies(AAdeptClass* AdeptClass)
 {
+	if(AdeptClass == nullptr)
+		return;
+	
 	for (FPsynergyAvailability Psynergy : Psynergies)
 	{
 		int RequiredSeriesTier = Psynergy.ClassRequirement.GetDefaultObject()->ClassTier;

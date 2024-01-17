@@ -125,6 +125,7 @@ void AAdept::UpdateStats()
 	CurrentStats.Luck = TotalStats.Luck * CurrentPercentageLuck;
 }
 
+
 void AAdept::InitializeStats(FUnitStats* StatBlock)
 {
 	StatBlock->HP = BaseStats.HP;
@@ -135,6 +136,58 @@ void AAdept::InitializeStats(FUnitStats* StatBlock)
 	StatBlock->Luck = BaseStats.Luck;
 }
 
+FUnitStats AAdept::CalculateNewStats(ADjinni* Djinni, AAdeptClass* ClassPreview)
+{
+	FUnitStats NewBaseStats = {};
+
+	switch (Djinni->State) {
+	case EDjinniState::Set:
+		NewBaseStats = AddStats(BaseStats, Djinni->BaseStats);
+		break;
+	case EDjinniState::Standby:
+		NewBaseStats = SubtractStats(BaseStats, Djinni->BaseStats);
+		break;
+	default: ;
+	}
+
+	FUnitStats NewTotalStats = {};
+	NewTotalStats.HP = NewBaseStats.HP * ClassPreview->StatMultipliers.HP;
+	NewTotalStats.PP = NewBaseStats.PP * ClassPreview->StatMultipliers.PP;
+	NewTotalStats.Attack = NewBaseStats.Attack * ClassPreview->StatMultipliers.Attack;
+	NewTotalStats.Defense = NewBaseStats.Defense * ClassPreview->StatMultipliers.Defense;
+	NewTotalStats.Agility = NewBaseStats.Agility * ClassPreview->StatMultipliers.Agility;
+	NewTotalStats.Luck = NewBaseStats.Luck * ClassPreview->StatMultipliers.Luck;
+
+	return NewTotalStats;
+}
+
+FUnitStats AAdept::SubtractStats(FUnitStats Minuend, FUnitStats Subtrahend)
+{
+	FUnitStats Difference;
+
+	Difference.HP = Minuend.HP - Subtrahend.HP;
+	Difference.PP = Minuend.PP - Subtrahend.PP;
+	Difference.Attack = Minuend.Attack - Subtrahend.Attack;
+	Difference.Defense = Minuend.Defense - Subtrahend.Defense;
+	Difference.Agility = Minuend.Agility - Subtrahend.Agility;
+	Difference.Luck = Minuend.Luck - Subtrahend.Luck;
+
+	return Difference;
+}
+
+FUnitStats AAdept::AddStats(FUnitStats Addend, FUnitStats Addend2)
+{
+	FUnitStats Sum;
+
+	Sum.HP = Addend.HP + Addend2.HP;
+	Sum.PP = Addend.PP + Addend2.PP;
+	Sum.Attack = Addend.Attack + Addend2.Attack;
+	Sum.Defense = Addend.Defense + Addend2.Defense;
+	Sum.Agility = Addend.Agility + Addend2.Agility;
+	Sum.Luck = Addend.Luck + Addend2.Luck;
+
+	return Sum;
+}
 
 TArray<APsynergy*> AAdept::GetPsynergies()
 {

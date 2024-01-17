@@ -3,12 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Adept.h"
 #include "Psynergy.h"
 #include "GameFramework/Actor.h"
 #include "GoldenSun/Databases/AbstractDatabase.h"
 #include "AdeptClassSeries.generated.h"
 
-class AAdeptClass;
+
+struct FClassAvailability;
 
 USTRUCT()
 struct FPsynergyAvailability

@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\rd.cpp",
+        "Source": "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\rd.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
-            "g:\\projects\\unreal\\testproject\\plugins\\developer\\riderlink\\source\\rd\\rd.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rd\\definitions.h",
+            "g:\\projects\\github repos\\recreation-golden-sun-unreal\\plugins\\developer\\riderlink\\source\\rd\\rd.h",
             "g:\\programs\\unreal\\ue_5.3\\engine\\source\\runtime\\core\\public\\logging\\logmacros.h",
             "g:\\programs\\unreal\\ue_5.3\\engine\\source\\runtime\\core\\public\\containers\\unrealstring.h",
             "g:\\programs\\unreal\\ue_5.3\\engine\\source\\runtime\\core\\public\\coretypes.h",
