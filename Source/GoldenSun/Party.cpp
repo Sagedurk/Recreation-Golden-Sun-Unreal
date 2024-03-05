@@ -155,3 +155,39 @@ void AParty::ResetCurrentMember()
 {
 	SetCurrentMember(PartyMembers[0]);
 }
+
+int32 AParty::GetPartyDjinnAmountByElement(EElementalType DjinnElement)
+{
+	int32 PartyDjinnAmount = 0;
+	for (AAdept* PartyMember : PartyMembers)
+	{
+		int32 AdeptDjinnAmount = PartyMember->GetDjinnAmount(DjinnElement);
+		PartyDjinnAmount += AdeptDjinnAmount;
+	}
+
+	return PartyDjinnAmount;
+}
+
+int32 AParty::GetPartyDjinnAmountByState(EDjinniState State)
+{
+	int32 PartyDjinnAmount = 0;
+	for (AAdept* PartyMember : PartyMembers)
+	{
+		int32 AdeptDjinnAmount = PartyMember->GetDjinnAmount(State);
+		PartyDjinnAmount += AdeptDjinnAmount;
+	}
+
+	return PartyDjinnAmount;
+}
+
+int32 AParty::GetPartyDjinnAmount(EElementalType DjinnElement, EDjinniState State)
+{
+	int32 PartyDjinnAmount = 0;
+	for (AAdept* PartyMember : PartyMembers)
+	{
+		int32 AdeptDjinnAmount = PartyMember->GetDjinnAmount(DjinnElement, State);
+		PartyDjinnAmount += AdeptDjinnAmount;
+	}
+
+	return PartyDjinnAmount;
+}

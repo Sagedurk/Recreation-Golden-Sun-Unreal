@@ -216,11 +216,24 @@ TArray<ADjinni*> AAdept::GetDjinn()
 int32 AAdept::GetDjinnAmount(EElementalType DjinnElement)
 {
 	int32 DjinnAmount = 0;
-	for (size_t i = 0; i < SpawnedDjinn.Num(); i++)
+	
+	for (ADjinni* Djinni : SpawnedDjinn)
 	{
-		ADjinni* Djinni = SpawnedDjinn[i];
-
 		if(Djinni->Element != DjinnElement)
+			continue;
+
+		DjinnAmount++;
+	}
+
+	return DjinnAmount;
+}
+int32 AAdept::GetDjinnAmount(EDjinniState State)
+{
+	int32 DjinnAmount = 0;
+	
+	for (ADjinni* Djinni : SpawnedDjinn)
+	{
+		if(Djinni->State != State)
 			continue;
 
 		DjinnAmount++;
@@ -232,10 +245,9 @@ int32 AAdept::GetDjinnAmount(EElementalType DjinnElement)
 int32 AAdept::GetDjinnAmount(EElementalType DjinnElement, EDjinniState State)
 {
 	int32 DjinnAmount = 0;
-	for (size_t i = 0; i < SpawnedDjinn.Num(); i++)
+	                                    
+	for (ADjinni* Djinni : SpawnedDjinn)
 	{
-		ADjinni* Djinni = SpawnedDjinn[i];
-
 		if(Djinni->Element != DjinnElement || Djinni->State != State)
 			continue;
 

@@ -131,6 +131,7 @@ public:
 	TArray<ADjinni*> GetDjinn();
 
 	int32 GetDjinnAmount(EElementalType DjinnElement);
+	int32 GetDjinnAmount(EDjinniState State);
 	int32 GetDjinnAmount(EElementalType DjinnElement, EDjinniState State);
 	
 	UFUNCTION(BlueprintCallable)

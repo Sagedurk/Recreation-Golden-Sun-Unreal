@@ -73,4 +73,14 @@ public:
 	AAdept* PeekPreviousMember();
 
 	void ResetCurrentMember();
+
+
+	UFUNCTION(BlueprintCallable)
+	int32 GetPartyDjinnAmountByElement(EElementalType DjinnElement);
+	
+	UFUNCTION(BlueprintCallable)
+	int32 GetPartyDjinnAmountByState(EDjinniState State);
+	
+	UFUNCTION(BlueprintCallable)
+	int32 GetPartyDjinnAmount(EElementalType DjinnElement, EDjinniState State);
 };
