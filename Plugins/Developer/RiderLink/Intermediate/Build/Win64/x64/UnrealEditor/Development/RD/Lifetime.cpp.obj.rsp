@@ -1,8 +1,8 @@
-"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\Lifetime.cpp"
-/FI"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Lifetime.cpp.obj"
-/sourceDependencies "G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Lifetime.cpp.dep.json"
-@"G:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"X:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\Lifetime.cpp"
+/FI"X:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"X:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Lifetime.cpp.obj"
+/sourceDependencies "X:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Lifetime.cpp.dep.json"
+@"X:\Projects\Github Repos\Recreation-Golden-Sun-Unreal\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
