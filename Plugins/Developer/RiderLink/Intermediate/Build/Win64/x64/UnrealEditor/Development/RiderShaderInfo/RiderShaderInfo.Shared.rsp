@@ -10,7 +10,7 @@
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "X:\Programs\IDEs\Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\INCLUDE"
-/external:I "X:\Windows Kits\10\include\10.0.22621.0\ucrt"
-/external:I "X:\Windows Kits\10\include\10.0.22621.0\shared"
-/external:I "X:\Windows Kits\10\include\10.0.22621.0\um"
-/external:I "X:\Windows Kits\10\include\10.0.22621.0\winrt"
+/external:I "X:\Windows Kits\10\include\10.0.20348.0\ucrt"
+/external:I "X:\Windows Kits\10\include\10.0.20348.0\shared"
+/external:I "X:\Windows Kits\10\include\10.0.20348.0\um"
+/external:I "X:\Windows Kits\10\include\10.0.20348.0\winrt"

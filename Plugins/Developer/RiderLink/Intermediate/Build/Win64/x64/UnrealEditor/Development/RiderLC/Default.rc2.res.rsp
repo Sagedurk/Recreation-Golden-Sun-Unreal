@@ -3,10 +3,10 @@
 /l 0x409
 /I "."
 /I "X:\Programs\IDEs\Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\INCLUDE"
-/I "X:\Windows Kits\10\include\10.0.22621.0\ucrt"
-/I "X:\Windows Kits\10\include\10.0.22621.0\shared"
-/I "X:\Windows Kits\10\include\10.0.22621.0\um"
-/I "X:\Windows Kits\10\include\10.0.22621.0\winrt"
+/I "X:\Windows Kits\10\include\10.0.20348.0\ucrt"
+/I "X:\Windows Kits\10\include\10.0.20348.0\shared"
+/I "X:\Windows Kits\10\include\10.0.20348.0\um"
+/I "X:\Windows Kits\10\include\10.0.20348.0\winrt"
 /DIS_PROGRAM=0
 /DUE_EDITOR=1
 /DUSE_SHADER_COMPILER_WORKER_TRACE=0
