@@ -21,6 +21,9 @@ class GOLDENSUN_API AAdept : public AUnit
 	GENERATED_BODY()
 
 public:
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FName Name;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EElementalType BaseElement;
