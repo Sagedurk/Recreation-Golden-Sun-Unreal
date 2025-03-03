@@ -18,7 +18,8 @@ void AParty::BeginPlay()
 	Super::BeginPlay();
 
 	if (UCustomGameInstance* GameInstance = Cast<UCustomGameInstance>(GetGameInstance()))
-	{		
+	{
+		GameInstance->SetParty(this);
 		FTimerHandle TimerHandle; 
 		GameInstance->TimerManager->SetTimer(TimerHandle, this, &AParty::GetGameInstanceReferences, 0.5f, false, 0.5f);
 	}

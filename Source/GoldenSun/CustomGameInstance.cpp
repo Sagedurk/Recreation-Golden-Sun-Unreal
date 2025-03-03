@@ -109,8 +109,19 @@ void UCustomGameInstance::TrySetCombatInitiator(ACombatInitiator* _CombatInitiat
 }
 
 AParty* UCustomGameInstance::GetParty() const
-{	
+{
 	return Party;
+}
+
+/**
+ * @details Temporary function needed to keep pointer references
+ * for the old system while transitioning into a data driven approach
+ * 
+ * @param _Party Object reference
+ */
+void UCustomGameInstance::SetParty(AParty* _Party)
+{
+	Party = _Party;
 }
 
 UPartyData* UCustomGameInstance::GetPartyData() const

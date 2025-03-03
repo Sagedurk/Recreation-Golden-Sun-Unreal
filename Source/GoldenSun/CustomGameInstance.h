@@ -67,6 +67,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	AParty* GetParty() const;
+	void SetParty(AParty* _Party);
 
 	UFUNCTION(BlueprintCallable)
 	UPartyData* GetPartyData() const;
