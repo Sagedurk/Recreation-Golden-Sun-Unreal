@@ -13,20 +13,20 @@ void AAdept::BeginPlay()
 {
 	Super::BeginPlay();
 
-	InitializeStats(&TotalStats);
-	InitializeStats(&CurrentStats);
-	
-	if(UCustomGameInstance* GameInstance = Cast<UCustomGameInstance>(GetGameInstance()))
-	{
-		PsynergyDatabase = GameInstance->GetPsynergyDatabase();
-		SpawnPsynergies();
-
-		DjinniDatabase = GameInstance->GetDjinniDatabase();
-		SpawnDjinn();
-
-		AdeptClassDatabase = GameInstance->GetAdeptClassSeriesDatabase();
-		UpdateAdeptClass();
-	}
+	// InitializeStats(&TotalStats);
+	// InitializeStats(&CurrentStats);
+	//
+	// if(UCustomGameInstance* GameInstance = Cast<UCustomGameInstance>(GetGameInstance()))
+	// {
+	// 	PsynergyDatabase = GameInstance->GetPsynergyDatabase();
+	// 	SpawnPsynergies();
+	//
+	// 	DjinniDatabase = GameInstance->GetDjinniDatabase();
+	// 	SpawnDjinn();
+	//
+	// 	AdeptClassDatabase = GameInstance->GetAdeptClassSeriesDatabase();
+	// 	UpdateAdeptClass();
+	// }
 }
 
 void AAdept::SpawnPsynergies()

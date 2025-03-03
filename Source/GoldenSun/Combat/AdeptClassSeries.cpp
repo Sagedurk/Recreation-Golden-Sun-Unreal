@@ -30,6 +30,9 @@ void AAdeptClassSeries::GetGameInstanceReferences()
 
 bool AAdeptClassSeries::MeetsSeriesRequirement(AAdept* Adept)
 {
+	if(Adept->BaseAdeptClassSeries.GetDefaultObject() == this)
+		return true;
+	
 	for (FSeriesAvailability Availability : Requirements)
 	{
 		if(Adept->BaseElement != Availability.AdeptElement)

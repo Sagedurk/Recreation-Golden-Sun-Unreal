@@ -7,6 +7,7 @@
 #include "GoldenSun/CustomGameInstance.h"
 #include "CombatInitiator.generated.h"
 
+class AAdept;
 class ACombatTargeting;
 class AUnit;
 
@@ -19,12 +20,20 @@ public:
 	// Sets default values for this actor's properties
 	ACombatInitiator();
 
-
 	UPROPERTY()
 	ACombatTargeting* CombatTargeting;
 
+	//UPROPERTY()
+	//AParty* Party;
+
 	UPROPERTY()
-	AParty* Party;
+	UPartyData* PartyData;
+
+	UPROPERTY(EditAnywhere)
+	TArray<AAdept*> AdeptTemplates;
+
+private:
+	const int MaxAdepts = 4;
 
 protected:
 	// Called when the game starts or when spawned
@@ -41,4 +50,5 @@ public:
 private:
 	void GetGameInstanceReferences();
 	void InitiateCombat();
+	static void SetAdeptData(AAdept* AdeptObject, const UAdeptData* AdeptData);
 };

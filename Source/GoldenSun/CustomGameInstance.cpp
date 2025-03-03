@@ -2,8 +2,33 @@
 
 
 #include "CustomGameInstance.h"
-#include "Databases/AdeptClassSeriesDatabase.h"
 
+#include "GoldenAssetManager.h"
+#include "Party.h"
+#include "Databases/AdeptClassSeriesDatabase.h"
+#include "Engine/AssetManager.h"
+
+
+void UCustomGameInstance::Initialize()
+{
+	AssetManager = &UGoldenAssetManager::Get();
+	AssetManager->SetGameInstanceReference(this);
+	
+	AssetManager->SetPartyData();
+	PartyData = AssetManager->PartyData;
+
+	AssetManager->SetAdeptDatabaseData();
+	AdeptDatabaseData = AssetManager->AdeptDatabaseData;
+
+	if(PartyData == nullptr)
+		return;
+	
+	FString Message = "PartyData: Count - " + FString::FromInt(PartyData->PartyMembers.Num());
+
+	if(GEngine)
+		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Cyan, *Message);
+	
+}
 
 ACombatTargeting* UCustomGameInstance::GetCombatTargeting() const
 {
@@ -84,12 +109,11 @@ void UCustomGameInstance::TrySetCombatInitiator(ACombatInitiator* _CombatInitiat
 }
 
 AParty* UCustomGameInstance::GetParty() const
-{
+{	
 	return Party;
 }
 
-void UCustomGameInstance::TrySetParty(AParty* _Party)
+UPartyData* UCustomGameInstance::GetPartyData() const
 {
-	if (Party == nullptr)
-		Party = _Party;
+	return PartyData;
 }

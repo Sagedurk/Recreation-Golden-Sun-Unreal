@@ -48,6 +48,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void AddMember(FString AdeptName);
 
+	UFUNCTION(BlueprintCallable)
 	void RemoveMember(AAdept* PartyMember);
 
 

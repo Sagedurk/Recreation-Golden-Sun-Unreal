@@ -3,10 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
+//#include "DataMaster.h"
+#include "DataMaster.h"
 #include "Engine/GameInstance.h"
 #include "Combat/CombatTargeting.h"
 #include "CustomGameInstance.generated.h"
 
+class UGoldenAssetManager;
+class AAdeptDatabase;
 class AAdeptClassSeriesDatabase;
 class ADjinniDatabase;
 class AMonsterDatabase;
@@ -22,6 +26,9 @@ class GOLDENSUN_API UCustomGameInstance : public UGameInstance
 	GENERATED_BODY()
 	
 public:
+
+	UFUNCTION(BlueprintCallable)
+	void Initialize();
 
 	UFUNCTION(BlueprintCallable)
 	ACombatTargeting* GetCombatTargeting() const;
@@ -60,11 +67,15 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	AParty* GetParty() const;
-	
-	void TrySetParty(AParty* _Party);
 
+	UFUNCTION(BlueprintCallable)
+	UPartyData* GetPartyData() const;
+	
 private:
 
+	UPROPERTY()
+	UGoldenAssetManager* AssetManager;
+	
 	UPROPERTY()
 	ACombatTargeting* CombatTargeting;
 
@@ -85,8 +96,14 @@ private:
 	
 	UPROPERTY()
 	ACombatInitiator* CombatInitiator;
-
 	
 	UPROPERTY()
 	AParty* Party;
+	
+	UPROPERTY()
+	UPartyData* PartyData;
+
+	UPROPERTY()
+	UAdeptDatabaseData* AdeptDatabaseData;
+	
 };

@@ -68,7 +68,7 @@ void ACombatInitiator::GetGameInstanceReferences()
 	if (UCustomGameInstance* GameInstance = Cast<UCustomGameInstance>(GetGameInstance()))
 	{
 		CombatTargeting = GameInstance->GetCombatTargeting();
-		Party = GameInstance->GetParty();
+		PartyData = GameInstance->GetPartyData();
 		InitiateCombat();
 	}
 
@@ -76,13 +76,35 @@ void ACombatInitiator::GetGameInstanceReferences()
 
 void ACombatInitiator::InitiateCombat()
 {
-	for (size_t i = 0; i < Party->PartyMembers.Num(); i++)
+	for (size_t i = 0; i < PartyData->PartyMembers.Num(); i++)
 	{
-		CombatTargeting->AllyTeam.Add(Party->PartyMembers[i]);
+		if(i >= MaxAdepts)
+			break;
+
+		CombatTargeting->AllyTeam.Add(AdeptTemplates[i]);
+		SetAdeptData(AdeptTemplates[i], PartyData->PartyData[i]);
 	}
 
-	RepositionTeam(CombatTargeting->AllyTeam, FVector(-150, 0, 50), FVector(0, 100, 0));
+	const int AdeptTemplatesToRemove = AdeptTemplates.Num() - PartyData->PartyMembers.Num();
+
+	if(AdeptTemplatesToRemove > 0)
+	{
+		for (size_t i = 0; i < AdeptTemplatesToRemove; i++)
+		{
+			AAdept* Adept = AdeptTemplates.Pop();
+			Adept->Destroy();
+		}
+	}
+
+	RepositionTeam(CombatTargeting->AllyTeam, FVector(-150, 0, 0), FVector(0, 100, 0));
 	
+}
+
+void ACombatInitiator::SetAdeptData(AAdept* AdeptObject, const UAdeptData* AdeptData)
+{
+	AdeptObject->Name = AdeptData->Name;
+	AdeptObject->Portrait = AdeptData->Portrait;
+	AdeptObject->CombatMesh = AdeptData->CombatMesh;
 }
 
 

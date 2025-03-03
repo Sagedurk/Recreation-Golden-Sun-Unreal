@@ -8,6 +8,7 @@
 #include "GoldenSun/Databases/DjinniDatabase.h"
 #include "Adept.generated.h"
 
+class AAdeptClassSeries;
 class AAdeptClassSeriesDatabase;
 class AAdeptClass;
 class APsynergyDatabase;
@@ -28,8 +29,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EElementalType BaseElement;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TSubclassOf<AAdeptClassSeries> BaseAdeptClassSeries;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSoftObjectPtr<UTexture2D> Portrait;
+	UTexture2D* Portrait;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	int Level;
@@ -40,6 +44,8 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	AAdeptClass* AdeptClass;
 
+	UPROPERTY(BlueprintReadOnly)
+	USkeletalMesh* CombatMesh;
 	
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

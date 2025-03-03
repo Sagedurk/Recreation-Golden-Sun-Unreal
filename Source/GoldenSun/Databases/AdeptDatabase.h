@@ -22,7 +22,7 @@ public:
 	UPROPERTY()
 	TMap<FString, TSubclassOf<AAdept>> DatabaseMap;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TArray<TSubclassOf<AAdept>> Database;
 
 	UPROPERTY()

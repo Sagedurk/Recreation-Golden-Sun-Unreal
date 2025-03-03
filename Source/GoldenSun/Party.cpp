@@ -18,12 +18,9 @@ void AParty::BeginPlay()
 	Super::BeginPlay();
 
 	if (UCustomGameInstance* GameInstance = Cast<UCustomGameInstance>(GetGameInstance()))
-	{
-		GameInstance->TrySetParty(this);
-		
+	{		
 		FTimerHandle TimerHandle; 
 		GameInstance->TimerManager->SetTimer(TimerHandle, this, &AParty::GetGameInstanceReferences, 0.5f, false, 0.5f);
-
 	}
 	
 }
@@ -38,12 +35,38 @@ void AParty::Tick(float DeltaTime)
 void AParty::AddMember(FString AdeptName)
 {
 	AAdept* Adept = AdeptDatabase->SpawnAdept(AdeptName);
-	PartyMembers.Add(Adept);
+	
+
+	if(Adept != nullptr)
+		PartyMembers.Add(Adept);
 }
 
 void AParty::RemoveMember(AAdept* PartyMember)
 {
+    if(PartyMembers.Num() == 1)
+    	return;
+
+	int PartyMemberIndex = -1;
+	
+	if(PartyMember == CurrentPartyMember)
+		PartyMemberIndex = PartyMembers.Find(PartyMember);
+	
 	PartyMembers.Remove(PartyMember);
+
+	if(PartyMember != CurrentPartyMember)
+	{
+		PartyMember->Destroy();
+		return;
+	}
+
+	if(PartyMemberIndex >= PartyMembers.Num())
+		SetCurrentMember(PartyMembers[PartyMembers.Num() - 1]);
+	else if (PartyMemberIndex < 0)
+		SetCurrentMember(PartyMembers[0]);
+	else
+		SetCurrentMember(PartyMembers[PartyMemberIndex]);
+	
+	PartyMember->Destroy();
 }
 
 void AParty::TryMoveMember(AAdept* PartyMember, int NewIndex)
