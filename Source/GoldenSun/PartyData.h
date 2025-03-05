@@ -11,7 +11,7 @@ class UAdeptData;
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class GOLDENSUN_API UPartyData : public UDataAsset
 {
 	GENERATED_BODY()
