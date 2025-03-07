@@ -10,14 +10,14 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class GOLDENSUN_API UAdeptData : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 
 public:
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, AssetRegistrySearchable)
 	FName Name;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

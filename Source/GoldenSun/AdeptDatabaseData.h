@@ -10,13 +10,14 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class GOLDENSUN_API UAdeptDatabaseData : public UDataAsset
 {
 	GENERATED_BODY()
 
 public:
-
+	
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	TArray<UAdeptData*> PartyMembers;
+	TArray<TSoftObjectPtr<UAdeptData>> PlayableAdepts;
 };
