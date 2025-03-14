@@ -21,14 +21,24 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FName> PartyMembers;
 
-	UPROPERTY(BlueprintReadOnly)
-	TArray<UAdeptData*> PartyData;
+	UPROPERTY(BlueprintReadWrite)
+	TArray<UAdeptData*> PartyMemberData;
 
+	FName GetCurrentPartyMemberName();
+	
+	UFUNCTION(BlueprintCallable)
+	int GetCurrentPartyMemberIndex();
+
+	UFUNCTION(BlueprintCallable)
 	void LoadPartyData(TArray<FName> Bundles);
 
-private:
+	UFUNCTION(BlueprintCallable)
 	void UnloadPartyData();
+	
+private:
 
 	UPROPERTY()
 	UGoldenAssetManager* AssetManager;
+
+	int CurrentPartyMemberIndex;
 };

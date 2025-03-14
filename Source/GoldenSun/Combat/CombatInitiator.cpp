@@ -82,7 +82,7 @@ void ACombatInitiator::InitiateCombat()
 			break;
 
 		CombatTargeting->AllyTeam.Add(AdeptTemplates[i]);
-		SetAdeptData(AdeptTemplates[i], PartyData->PartyData[i]);
+		SetAdeptData(AdeptTemplates[i], PartyData->PartyMemberData[i]);
 	}
 
 	const int AdeptTemplatesToRemove = AdeptTemplates.Num() - PartyData->PartyMembers.Num();

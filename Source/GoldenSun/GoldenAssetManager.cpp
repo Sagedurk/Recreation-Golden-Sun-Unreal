@@ -5,6 +5,7 @@
 
 #include "CustomGameInstance.h"
 #include "DataMaster.h"
+#include "Tasks/Task.h"
 
 const FPrimaryAssetType UGoldenAssetManager::DataMasterType = TEXT("MasterAsset");
 const FPrimaryAssetType UGoldenAssetManager::AdeptType = TEXT("Adept");
@@ -40,8 +41,23 @@ void UGoldenAssetManager::LoadAdeptData(UPartyData* PartyData, FName AdeptName, 
 {
 	UGoldenAssetManager& AssetManager = Get();
 	FPrimaryAssetId AdeptId = FPrimaryAssetId(AdeptType, AdeptName);
-	AssetManager.LoadPrimaryAsset(AdeptId, Bundles, FStreamableDelegate::CreateUObject(&AssetManager, &UGoldenAssetManager::AddAdeptToParty, PartyData, AdeptId));
+
+	using namespace UE::Tasks;
+	FTask LoadAssetTask = Launch(UE_SOURCE_LOCATION, [&AssetManager, &AdeptId, &Bundles] {AssetManager.LoadPrimaryAsset(AdeptId, Bundles);});
+
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, TEXT("WAITING FOR ASSET TO LOAD"));
+
+	LoadAssetTask.Wait(FTimespan::FromMilliseconds(3000));
+
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Orange, TEXT("WAITING FOR DATA TO BE ADDED TO PARTY"));
+	
+	FTask SubTask = Launch(UE_SOURCE_LOCATION, [&AssetManager, &PartyData, &AdeptId] {AssetManager.AddAdeptToParty(PartyData, AdeptId);});
+	SubTask.Wait(FTimespan::FromMilliseconds(3000));
+
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, TEXT("FINISHED WAITING"));
 }
+
+
 
 void UGoldenAssetManager::Callback(FPrimaryAssetId DataMasterId)
 {
@@ -51,6 +67,7 @@ void UGoldenAssetManager::Callback(FPrimaryAssetId DataMasterId)
 		return;
 
 	PartyData = DataMaster->Party;
+	
 }
 
 void UGoldenAssetManager::DatabaseCallback(FPrimaryAssetId DataMasterId)
@@ -73,11 +90,13 @@ UGoldenAssetManager& UGoldenAssetManager::Get()
 void UGoldenAssetManager::AddAdeptToParty(UPartyData* _PartyData, FPrimaryAssetId AdeptId)
 {
 	UAdeptData* Adept = GetPrimaryAssetObject<UAdeptData>(AdeptId);
-
+	
 	if(!Adept || !_PartyData)
 		return;
 
-	_PartyData->PartyData.Add(Adept);
+	_PartyData->PartyMemberData.Add(Adept);
+
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("ADEPT DATA ADDED"));
 }
 
 void UGoldenAssetManager::SetGameInstanceReference(UCustomGameInstance* _GameInstance)

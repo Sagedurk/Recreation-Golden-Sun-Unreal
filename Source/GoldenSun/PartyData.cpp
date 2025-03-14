@@ -5,6 +5,19 @@
 
 #include "GoldenAssetManager.h"
 
+FName UPartyData::GetCurrentPartyMemberName()
+{
+	return PartyMembers[CurrentPartyMemberIndex];
+}
+
+int UPartyData::GetCurrentPartyMemberIndex()
+{
+	FMathf::Clamp(CurrentPartyMemberIndex, 0, PartyMembers.Num() - 1);
+	return CurrentPartyMemberIndex;
+}
+
+//TODO: Make function wait for Asset Manager to finish loading Adept Data
+//TODO: Research BlueprintAsyncActionBase
 void UPartyData::LoadPartyData(TArray<FName> Bundles)
 {
 	AssetManager = &UGoldenAssetManager::Get();
@@ -20,14 +33,14 @@ void UPartyData::LoadPartyData(TArray<FName> Bundles)
 
 void UPartyData::UnloadPartyData()
 {
-	for (size_t i = 0; i < PartyData.Num(); i++)
+	for (size_t i = 0; i < PartyMemberData.Num(); i++)
 	{
-		if(PartyData[i] == nullptr)
+		if(PartyMemberData[i] == nullptr)
 			continue;
 			
-		FPrimaryAssetId AdeptAssetId = FPrimaryAssetId(AssetManager->AdeptType, PartyData[i]->Name);
+		FPrimaryAssetId AdeptAssetId = FPrimaryAssetId(AssetManager->AdeptType, PartyMemberData[i]->Name);
 		AssetManager->UnloadPrimaryAsset(AdeptAssetId);
 	}
 
-	PartyData.Empty();
+	PartyMemberData.Empty();
 }

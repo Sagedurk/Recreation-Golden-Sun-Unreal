@@ -24,11 +24,11 @@ public:
 	static void LoadAdeptData(UPartyData* PartyData, FName AdeptName, const TArray<FName>& Bundles = TArray<FName>());
 	void Callback(FPrimaryAssetId DataMasterId);
 	void DatabaseCallback(FPrimaryAssetId DataMasterId);
-	void AddAdeptToParty(UPartyData* _PartyData, FPrimaryAssetId AdeptId);
 	void SetGameInstanceReference(UCustomGameInstance* _GameInstance);
 	static UGoldenAssetManager& Get();
 	
 private:
+	void AddAdeptToParty(UPartyData* _PartyData, FPrimaryAssetId AdeptId);
 	
 
 
